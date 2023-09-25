@@ -1,0 +1,39 @@
+<!-- updateStudent.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Student</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>Update Student</h1>
+    <form action="/students/update/<%= student._id %>" method="POST">
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        value="<%= student.name %>"
+        required
+      />
+      <input
+        type="number"
+        name="age"
+        placeholder="Age"
+        value="<%= student.age %>"
+        required
+      />
+      <input
+        type="text"
+        name="grade"
+        placeholder="Grade"
+        value="<%= student.grade %>"
+        required
+      />
+      <button type="submit">Update Student</button>
+    </form>
+    <a href="/students">Back to Students</a>
+  </body>
+</html>
