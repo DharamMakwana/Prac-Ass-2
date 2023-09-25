@@ -1,0 +1,76 @@
+<<<<<<< HEAD
+<!-- updateStudent.ejs -->
+
+=======
+>>>>>>> f306e74a21e6a8d549a6ae8258cbfbd0438ac4e0
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
+    <title>Update Student</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>Update Student Hey there</h1>
+    <form action="/students/update/<%= student._id %>" method="POST">
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        value="<%= student.name %>"
+        required
+      />
+      <input
+        type="number"
+        name="age"
+        placeholder="Age"
+        value="<%= student.age %>"
+        required
+      />
+      <input
+        type="text"
+        name="grade"
+        placeholder="Grade"
+        value="<%= student.grade %>"
+=======
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>Update</h1>
+    <form
+      id="update-form"
+      action="/students/update/<%= data.id %>"
+      method="POST"
+    >
+      <input
+        value="<%= data.name %>"
+        type="text"
+        name="name"
+        placeholder="Name"
+        required
+      />
+      <input
+        value="<%= data.age %>"
+        type="number"
+        name="age"
+        placeholder="Age"
+        required
+      />
+      <input
+        value="<%= data.grade %>"
+        name="grade"
+        placeholder="Grade"
+>>>>>>> f306e74a21e6a8d549a6ae8258cbfbd0438ac4e0
+        required
+      />
+      <button type="submit">Update Student</button>
+    </form>
+<<<<<<< HEAD
+    <a href="/students">Back to Students</a>
+=======
+>>>>>>> f306e74a21e6a8d549a6ae8258cbfbd0438ac4e0
+  </body>
+</html>

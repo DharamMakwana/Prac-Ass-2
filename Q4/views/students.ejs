@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>Students</h1>
+    <form action="/students/add" method="POST">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="number" name="age" placeholder="Age" required />
+      <input type="text" name="grade" placeholder="Grade" required />
+      <button type="submit">Add Student</button>
+    </form>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Grade</th>
+        <th>Action</th>
+      </tr>
+      <% data.forEach(student => { %>
+      <tr>
+        <td><%= student.name %></td>
+        <td><%= student.age %></td>
+        <td><%= student.grade %></td>
+        <td>
+          <!-- <a href="/views/updateStudent.ejs?id=<%= student._id %>">Update</a> -->
+          <a href="/students/update/<%= student._id %>">Update</a>
+
+          <a href="/students/delete/<%= student._id %>">Delete</a>
+        </td>
+      </tr>
+      <% }); %>
+    </table>
+    <a href="/auth/logout">Logout</a>
+  </body>
+</html>
